@@ -10,6 +10,7 @@ Para explotarlo en el Login ingresamos la siguiente sentencia SQL con una contra
 
 ![image](https://github.com/user-attachments/assets/bacc1ff8-b874-4828-a620-6b930f7a4070)
 
+Y entramos como admin a la aplicación:
 
 ![image](https://github.com/user-attachments/assets/1fda8b2b-9ca7-462c-a4d9-a286d9c55a8d)
 
